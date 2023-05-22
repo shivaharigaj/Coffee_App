@@ -11,11 +11,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<Coffee> coffees = [
-    Coffee(name: "Espresso", image: "images/Espresso.png", price: 350),
-    Coffee(name: "Cappuccino", image: "images/Cappuccino.png", price: 450),
-    Coffee(name: "Macchiato", image: "images/macciato.png", price: 360),
-    Coffee(name: "Mocha", image: "images/Mocha.png", price: 355),
-    Coffee(name: "Latte", image: "images/Latte.png", price: 250),
+    Coffee(name: "Espresso", image: "assets/Espresso.png", price: 350),
+    Coffee(name: "Cappuccino", image: "assets/Cappuccino.png", price: 450),
+    Coffee(name: "Macchiato", image: "assets/macciato.png", price: 360),
+    Coffee(name: "Mocha", image: "assets/Mocha.png", price: 355),
+    Coffee(name: "Latte", image: "assets/latte.png", price: 250),
   ];
   @override
   Widget build(BuildContext context) {
@@ -23,9 +23,9 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/background.png'),
+                image: AssetImage('assets/background.png'),
                 fit: BoxFit.cover,
                 opacity: 0.7,
               ),
@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: SafeArea(
                 child: SingleChildScrollView(
               child: Container(
-                padding: EdgeInsets.all(30),
+                padding: const EdgeInsets.all(30),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 30,
                     ),
                     RichText(
-                      text: TextSpan(
+                      text: const TextSpan(
                         text: 'Its Great ',
                         style: TextStyle(
                           fontSize: 40,
@@ -75,62 +75,62 @@ class _HomeScreenState extends State<HomeScreen> {
             )),
           ),
           // bottom Navigation Bar
-          Positioned(
-            bottom: 0,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30),
-                  topRight: Radius.circular(30),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.1,
-              child: Flex(
-                direction: Axis.horizontal,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.home,
-                    ),
-                    color: Colors.amber,
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.home,
-                    ),
-                    color: Colors.amber,
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.home,
-                    ),
-                    color: Colors.amber,
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.home,
-                    ),
-                    color: Colors.amber,
-                  ),
-                ],
-              ),
-            ),
-          ),
+          // Positioned(
+          //   bottom: 0,
+          //   child: Container(
+          //     decoration: BoxDecoration(
+          //       color: Colors.white,
+          //       borderRadius: const BorderRadius.only(
+          //         topLeft: Radius.circular(30),
+          //         topRight: Radius.circular(30),
+          //       ),
+          //       boxShadow: [
+          //         BoxShadow(
+          //           color: Colors.black.withOpacity(0.1),
+          //           spreadRadius: 5,
+          //           blurRadius: 7,
+          //           offset: const Offset(0, 3), // changes position of shadow
+          //         ),
+          //       ],
+          //     ),
+          //     width: MediaQuery.of(context).size.width,
+          //     height: MediaQuery.of(context).size.height * 0.1,
+          //     child: Flex(
+          //       direction: Axis.horizontal,
+          //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //       children: [
+          //         IconButton(
+          //           onPressed: () {},
+          //           icon: const Icon(
+          //             Icons.home,
+          //           ),
+          //           color: Colors.amber,
+          //         ),
+          //         IconButton(
+          //           onPressed: () {},
+          //           icon: const Icon(
+          //             Icons.home,
+          //           ),
+          //           color: Colors.amber,
+          //         ),
+          //         IconButton(
+          //           onPressed: () {},
+          //           icon: const Icon(
+          //             Icons.home,
+          //           ),
+          //           color: Colors.amber,
+          //         ),
+          //         IconButton(
+          //           onPressed: () {},
+          //           icon: const Icon(
+          //             Icons.home,
+          //           ),
+          //           color: Colors.amber,
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
@@ -171,12 +171,12 @@ class CoffeeListTile extends StatelessWidget {
                     height: 60,
                     fit: BoxFit.contain,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(
                     coffee.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                     ),
                   ),
@@ -203,12 +203,12 @@ class _CoffeeAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Image.asset(
-          'images/menu_icon.png',
+          'assets/menu_icon.png',
           width: 30,
           height: 30,
         ),
         Image.asset(
-          'images/search_icon.png',
+          'assets/search_icon.png',
           width: 30,
           height: 30,
         ),

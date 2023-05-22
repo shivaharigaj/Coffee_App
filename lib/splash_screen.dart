@@ -1,5 +1,7 @@
-import 'package:coffee/home_screen.dart';
+
 import 'package:flutter/material.dart';
+
+import 'navigation_bar.dart';
 
 class SplashScreen extends StatefulWidget {
   SplashScreen({Key? key}) : super(key: key);
@@ -14,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          context, MaterialPageRoute(builder: (context) => NavigationBars()));
     });
   }
 
@@ -24,13 +26,13 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/background.png'),
+            image: AssetImage('assets/background.png'),
             fit: BoxFit.cover,
           ),
         ),
         child: Center(
           child: Image.asset(
-            'images/logo.png',
+            'assets/logo.png',
             width: 100,
             height: 100,
           ),

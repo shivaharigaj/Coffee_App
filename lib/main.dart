@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         // primarySwatch coffee color
-        primarySwatch: MaterialColor(0xFF74533c, {
+        primarySwatch: const MaterialColor(0xFF74533c, {
           50: Color(0xFF805d45),
           100: Color(0xFF7a5841),
           200: Color(0xFF6f4f3e),

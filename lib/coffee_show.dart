@@ -36,7 +36,7 @@ class _CoffeeShowState extends State<CoffeeShow> {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('images/background.png'),
+              image: AssetImage('assets/background.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -186,7 +186,7 @@ class _CoffeeShowState extends State<CoffeeShow> {
                             size = sizeOptions[0];
                           }),
                           child: Image(
-                            image: AssetImage('images/cup_medium.png'),
+                            image: AssetImage('assets/cup_medium.png'),
                             height: 30,
                             color: size == 'Small'
                                 ? Color(0xFF74533c)
@@ -199,7 +199,7 @@ class _CoffeeShowState extends State<CoffeeShow> {
                             size = sizeOptions[1];
                           }),
                           child: Image(
-                            image: AssetImage('images/cup_medium.png'),
+                            image: AssetImage('assets/cup_medium.png'),
                             height: 40,
                             color: size == 'Medium'
                                 ? Color(0xFF74533c)
@@ -214,7 +214,7 @@ class _CoffeeShowState extends State<CoffeeShow> {
                             size = sizeOptions[2];
                           }),
                           child: Image(
-                            image: AssetImage('images/cup_medium.png'),
+                            image: AssetImage('assets/cup_medium.png'),
                             height: 50,
                             color: size == 'Large'
                                 ? Color(0xFF74533c)
@@ -255,7 +255,7 @@ class _CoffeeShowState extends State<CoffeeShow> {
                                 sugar = sugarOptions[0];
                               })),
                           child: Image.asset(
-                            'images/zero.png',
+                            'assets/zero.png',
                             color: sugar == 0 ? Color(0xFF74533c) : Colors.grey,
                           ),
                         ),
@@ -265,7 +265,7 @@ class _CoffeeShowState extends State<CoffeeShow> {
                             sugar = sugarOptions[1];
                           }),
                           child: Image(
-                            image: AssetImage('images/one.png'),
+                            image: AssetImage('assets/one.png'),
                             color: sugar == 1 ? Color(0xFF74533c) : Colors.grey,
                           ),
                         ),
@@ -275,7 +275,7 @@ class _CoffeeShowState extends State<CoffeeShow> {
                             sugar = sugarOptions[2];
                           }),
                           child: Image(
-                            image: AssetImage('images/two.png'),
+                            image: AssetImage('assets/two.png'),
                             height: 20,
                             color: sugar == 2 ? Color(0xFF74533c) : Colors.grey,
                           ),
@@ -288,7 +288,7 @@ class _CoffeeShowState extends State<CoffeeShow> {
                             sugar = sugarOptions[3];
                           }),
                           child: Image(
-                            image: AssetImage('images/three.png'),
+                            image: AssetImage('assets/three.png'),
                             color: sugar == 3 ? Color(0xFF74533c) : Colors.grey,
                           ),
                         ),
